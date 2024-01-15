@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Avata from "./components/Avata";
+import Boxes from "./components/Boxes";
+import Card from "./components/Card";
+import Counter from "./components/Counter";
+import Task1 from "./components/Task1";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let stylesArr = [{width: "300px", height: "150px", backgroundColor: "red"},{width: "200px", height: "50px", backgroundColor: "red"},{width: "100px", height: "50px", backgroundColor: "red"}]
+  return <div>
+    <Task1 />
+    <Boxes style={stylesArr} />
+    <Card>
+      <Avata src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBuFDjCZXG5A5L66JsFz-WvDrgpnnuLGdfmQ&usqp=CAU"/>
+    </Card>
+    <Counter />
+  </div>;
 }
 
 export default App;
